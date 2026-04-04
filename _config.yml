@@ -1,6 +1,6 @@
 # Setup
-title: Not Pure Poole
-description: A simple, beautiful, and powerful Jekyll theme for blogs
+title: Dreamweaver
+description: 同济大学软件工程在读学生，喜欢分享技术和生活的点滴。
 url: https://vszhub.github.io
 avatar: /avatar.jpg
 paginate: 5
@@ -28,17 +28,13 @@ exclude:
   - not-pure-poole.gemspec
 
 # Optimize Jekyl SEO Tag
-twitter:
-  username: vszhub
-  card: summary
 logo: logo.png
 social:
-  name: Songzi Vong
+  name: Dreamweaver
   links:
-    - https://twitter.com/vszhub
-    - https://github.com/vszhub
+    - https://github.com/No-99-Tongji
 google_site_verification: xxxxx
-lang: en
+lang: zh-CN
 
 sass:
   sass_dir: _sass
@@ -54,6 +50,6 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Songzi Vong
-  url: https://github.com/vszhub/
-  email: vszhub@gmail.com
+  name: Dreamweaver
+  url: https://github.com/No-99-Tongji/
+  email: 3167937401@qq.com
