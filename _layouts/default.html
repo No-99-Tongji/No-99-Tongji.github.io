@@ -38,6 +38,10 @@
       {% include mathjax.html %}
     {%- endif -%}
 
+    {%- if page.mermaid -%}
+      {% include mermaid.html %}
+    {%- endif -%}
+
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
       {%- include google-analytics.html -%}
     {%- endif -%}
