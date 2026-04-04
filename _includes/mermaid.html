@@ -2,8 +2,34 @@
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
 
   mermaid.initialize({
-    startOnLoad: true,
+    startOnLoad: false,
     securityLevel: 'loose',
     theme: 'default'
   });
+
+  // Jekyll fenced code blocks render as <pre><code class="language-mermaid">...
+  // Mermaid expects a .mermaid container, so we convert before rendering.
+  const renderMermaid = async () => {
+    const blocks = document.querySelectorAll('pre code.language-mermaid');
+
+    blocks.forEach((code) => {
+      const pre = code.parentElement;
+      if (!pre) return;
+
+      const container = document.createElement('div');
+      container.className = 'mermaid';
+      container.textContent = code.textContent || '';
+      pre.replaceWith(container);
+    });
+
+    await mermaid.run({ querySelector: '.mermaid' });
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      renderMermaid();
+    });
+  } else {
+    renderMermaid();
+  }
 </script>
