@@ -4,7 +4,16 @@
   mermaid.initialize({
     startOnLoad: false,
     securityLevel: 'loose',
-    theme: 'default'
+    theme: 'base',
+    themeVariables: {
+      darkMode: true,
+      background: '#0f172a',
+      primaryColor: '#111827',
+      primaryBorderColor: '#93c5fd',
+      primaryTextColor: '#f9fafb',
+      lineColor: '#e5e7eb',
+      edgeLabelBackground: '#0f172a'
+    }
   });
 
   // Jekyll fenced code blocks render as <pre><code class="language-mermaid">...
@@ -33,3 +42,33 @@
     renderMermaid();
   }
 </script>
+
+<style>
+  /* Improve mermaid readability on dark page backgrounds. */
+  .mermaid {
+    background: transparent;
+  }
+
+  .mermaid .edgePath .path,
+  .mermaid .flowchart-link {
+    stroke: #e5e7eb !important;
+  }
+
+  .mermaid .marker path {
+    fill: #e5e7eb !important;
+    stroke: #e5e7eb !important;
+  }
+
+  .mermaid .label,
+  .mermaid .edgeLabel {
+    color: #f9fafb !important;
+  }
+
+  .mermaid .node rect,
+  .mermaid .node circle,
+  .mermaid .node ellipse,
+  .mermaid .node polygon,
+  .mermaid .node path {
+    stroke: #93c5fd !important;
+  }
+</style>
