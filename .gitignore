@@ -42,5 +42,8 @@ validation-report.json
 # Folders to ignore
 node_modules
 
+# Blog editor
+editor/
+
 # Ruby gems
 *.gem
